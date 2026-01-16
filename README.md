@@ -82,6 +82,18 @@ g++ main.cpp document_processor.cpp -o analyzer
 
 ./analyzer
 
+## ⚠️ Limitations
+
+- The tool does not use AI or NLP techniques; all processing is rule-based.
+
+- It cannot infer answers beyond the text in the document; only works with the content provided.
+
+- Designed for plain text documents; formatted files (PDF, Word, etc.) are not supported.
+
+- Does not perform semantic analysis or context understanding.
+
+- Limited to single-user sequential processing; no multi-threading or concurrent access.
+
 ## 📚 Academic Context
 
 This project was developed as part of a semester course to practice and apply Data Structures and Algorithms concepts in a real programming task.
