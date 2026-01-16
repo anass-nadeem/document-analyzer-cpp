@@ -1,0 +1,38 @@
+Computer Science is the study of computation, algorithms, and information processing.
+
+Data Structure is a method of organizing, storing, and managing data efficiently so that operations such as access, insertion, and deletion can be performed effectively.
+
+Algorithm is a step-by-step procedure or set of rules used to solve a specific problem.
+
+Stack is a linear data structure that follows the Last In First Out principle. In a stack, the last element inserted is the first one to be removed.
+
+Queue is a linear data structure that follows the First In First Out principle. In a queue, the first element inserted is the first one to be removed.
+
+Linked List is a dynamic data structure consisting of nodes, where each node contains data and a reference to the next node in the sequence.
+
+Binary Tree is a hierarchical data structure in which each node has at most two children, referred to as the left child and the right child.
+
+Graph is a non-linear data structure that consists of vertices and edges, used to represent relationships between different entities.
+
+Probability is the measure of the likelihood that a particular event will occur. It is expressed as a number between zero and one.
+
+Statistics is the branch of mathematics that deals with the collection, analysis, interpretation, and presentation of data.
+
+Artificial Intelligence is the simulation of human intelligence in machines that are programmed to think and learn.
+
+Machine Learning is a subset of artificial intelligence that focuses on enabling machines to learn from data without being explicitly programmed.
+
+Deep Learning is a specialized subset of machine learning that uses neural networks with multiple layers.
+
+In computer science, data structures and algorithms are fundamental concepts that help in writing efficient programs.
+
+A stack is commonly used in function calls, undo operations, and expression evaluation.
+
+A queue is widely used in scheduling algorithms, resource management, and breadth-first search.
+
+Graphs are used in social networks, navigation systems, and recommendation engines.
+
+Probability plays an important role in machine learning, statistics, and data analysis.
+
+Efficient data structures improve the performance and scalability of software systems.
+Probability

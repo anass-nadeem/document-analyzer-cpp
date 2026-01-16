@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Analyzer Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Document Analyzer Dashboard</h1>
+
+    <div class="section" style="border-bottom: 2px solid #eee; padding-bottom: 15px;">
+        <h3>System Controls</h3>
+        <button onclick="sendCommand('/load')" style="background-color: #28a745;">
+            📂 Reload Document (Option 1)
+        </button>
+    </div>
+
+    <div class="section">
+        <h3>Query System</h3>
+        <div class="input-group">
+            <input type="text" id="askInput" placeholder="Enter question (e.g. What is probability?)">
+            <button onclick="askQuestion()">❓ Ask (Option 2)</button>
+        </div>
+        <div class="input-group">
+            <input type="text" id="searchInput" placeholder="Enter word to count">
+            <button onclick="searchWord()">🔍 Search (Option 3)</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Analysis Tools</h3>
+        <div style="display: flex; gap: 10px;">
+            <button onclick="sendCommand('/graph')">📊 Show Concept Graph (Option 4)</button>
+            <button onclick="sendCommand('/history')">📜 Show History (Option 5)</button>
+        </div>
+    </div>
+
+    <div class="section output">
+        <h3>System Output</h3>
+        <pre id="result">System ready...</pre>
+    </div>
+</div>
+
+<script>
+    // Helper function for simple buttons (Load, Graph, History)
+    async function sendCommand(endpoint) {
+        const resultBox = document.getElementById('result');
+        resultBox.innerText = "Processing...";
+        
+        try {
+            const response = await fetch(endpoint);
+            const text = await response.text();
+            resultBox.innerText = text;
+        } catch (error) {
+            resultBox.innerText = "Error: Is bridge.py running?";
+        }
+    }
+
+    // Function for Asking Questions
+    async function askQuestion() {
+        const input = document.getElementById('askInput').value;
+        const resultBox = document.getElementById('result');
+        resultBox.innerText = "Thinking...";
+        
+        try {
+            const response = await fetch(`/ask?q=${encodeURIComponent(input)}`);
+            const text = await response.text();
+            resultBox.innerText = text;
+        } catch (error) {
+            resultBox.innerText = "Error connecting to backend.";
+        }
+    }
+
+    // Function for Searching
+    async function searchWord() {
+        const input = document.getElementById('searchInput').value;
+        const resultBox = document.getElementById('result');
+        resultBox.innerText = "Searching...";
+        
+        try {
+            const response = await fetch(`/search?word=${encodeURIComponent(input)}`);
+            const text = await response.text();
+            resultBox.innerText = text;
+        } catch (error) {
+            resultBox.innerText = "Error connecting to backend.";
+        }
+    }
+</script>
+
+</body>
+</html>
